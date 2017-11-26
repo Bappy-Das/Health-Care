@@ -10,170 +10,341 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-
-	<link href="css/wickedpicker.css" rel="stylesheet" type='text/css' media="all" />
-	<link href="css/styleAppointment.css" rel='stylesheet' type='text/css' />
-
-	<link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-	<link href="//fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
-</head>
-
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
   
-  <section id="banner" class="banner">
-    <div class="bg-color">
-      <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-          <div class="col-md-12">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				      </button>
-              <a class="navbar-brand" href="#banner"><img src="img/UntitledLOGO.png" class="img-responsive" style="width: 140px; margin-top: -16px;"></a>
-            </div>
-            <div class="collapse navbar-collapse navbar-right" id="myNavbar">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#banner">Home</a></li>
-                <li class=""><a href="#service">Services</a></li>
-                <li class=""><a href="#">Testimonial</a></li>
-                <li class=""><a href="#">About</a></li>
-                <li class=""><a href="#footer">Contact</a></li>
-              </ul>
+  
+  <link href="css/wickedpicker.css" rel="stylesheet" type='text/css' media="all" />
+  <link href="css/styleAppointment.css" rel='stylesheet' type='text/css' />
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+
+
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <section id="banner" class="banner">
+      <div class="bg-color">
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <div class="col-md-12">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#banner"><img src="img/UntitledLOGO.png" class="img-responsive" style="width: 140px; margin-top: -16px;"></a>
+              </div>
+              <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#banner">Home</a></li>
+                  <li class=""><a href="#service1">Services</a></li>
+                  <li class=""><a href="#">Testimonial</a></li>
+                  <li class=""><a href="#">About</a></li>
+                  <li class=""><a href="#footer">Contact</a></li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
-      <div class="container">
-        <div class="row">
-          <div class="banner-info">
-            <div class="banner-logo text-center">
-              
-            </div>
-            <div class="banner-text text-center">
-              <h1 class="white">Healthcare at your desk!!</h1>
-              <p>Time is generally the best doctor.so well choose your best doctor before time losses.<br>The art of medicine consists in amusing the patient while nature cures the disease.</p>
-              <a href="#" class="btn btn-appoint">Make an Appointment.</a>
-            </div>
-            <div class="overlay-detail text-center">
-              <a href="#service"><i class="fa fa-angle-down"></i></a>
-            </div>
+        </nav>
+        <div class="container">
+          <div class="row">
+            <div class="banner-info">
+              <div class="banner-logo text-center">
+
+              </div>
+              <div class="banner-text text-center">
+                <h1 class="white">Healthcare at your desk!!</h1>
+                <p>Time is generally the best doctor.so well choose your best doctor before time losses.<br>The art of medicine consists in amusing the patient while nature cures the disease.</p>
+                <a href="#myModal" class="btn btn-lg btn-primary" data-toggle="modal" style="margin-top:15px">Make An Appoinment</a>
+                
+                
+                <div id="myModal" class="modal">
+
+                 <!-- Modal content -->
+                 
+                 <div class="bg-agile">
+                  <div class="book-appointment">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:white">&times;</button>
+                    <h2>Make an appointment</h2>
+                    <form action="#" method="post">
+                      <div class="left-agileits-w3layouts same">
+                        <div class="gaps">
+                         <p>Patient Name</p>
+                         <input type="text" name="Patient Name" placeholder="" required=""/>
+                       </div>	
+                       <div class="gaps">	
+                         <p>Phone Number</p>
+                         <input type="text" name="Number" placeholder="" required=""/>
+                       </div>
+                       <div class="gaps">
+                         <p>Email</p>
+                         <input type="email" name="email" placeholder="" required="" />
+                       </div>	
+                       <div class="gaps">
+                         <p>Symptoms</p>
+                         <textarea name="About Symptoms" placeholder="" required="" ></textarea>
+                       </div>
+                     </div>
+                     <div class="right-agileinfo same">
+                      <div class="gaps">
+                       <p>Select Date</p>		
+                       <input  id="datepicker1" name="Text" type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
+                     </div>
+                     <div class="gaps">
+                       <p>Department</p>	
+                       <select class="form-control">
+                         <option></option>
+                         <option>Cardiology</option>
+                         <option>Ophthalmology</option>
+                         <option>Neurology</option>
+                         <option>Psychology</option>
+                         <option>Dermatology</option>
+                       </select>
+                     </div>
+                     <div class="gaps">
+                       <p>Gender</p>	
+                       <select class="form-control">
+                         <option></option>
+                         <option>Male</option>
+                         <option>Female</option>
+                       </select>
+                     </div>
+                     <div class="gaps">
+                       <p>Department</p>	
+                       <select class="form-control">
+                         <option></option>
+                         <option>Cardiology</option>
+                         <option>Ophthalmology</option>
+                         <option>Neurology</option>
+                         <option>Psychology</option>
+                         <option>Dermatology</option>
+                       </select>
+                     </div>
+                   </div>
+                   <div class="clear"></div>
+                   <input type="submit" value="Make an appointment">
+                 </form>
+               </div>
+             </div>
+           </div> 
+
+
+           
+           <div class="overlay-detail text-center">
+            <a href="#service"><i class="fa fa-angle-down"></i></a>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  <section id="service" class="section-padding">
+  </div>
+</section>
+
+
+
+
+
+<section id="service1" class="section-padding" style="background:#154D8A">
+  <div class="container">
+
+    <div class="row">
+      <h1>Find Hospital near Your Door</h1>
+      <div class="col-md-4 col-sm-4">
+        <div class="gaps">
+          <h2>City</h2>  
+          <select class="form-control">
+           <option>Select A City</option>
+           <option>Dhaka</option>
+           <option>Chittagong</option>
+           <option>Rajshahi</option>
+           <option>Barisal</option>
+           <option>Khulna</option>
+           <option>Sylhet</option>
+           <option>Rangpur</option>
+           <option>Mymensingh</option>
+         </select>
+       </div>
+
+     </div>
+     <div class="col-md-4 col-sm-4">
+
+      <div class="gaps">
+       <h2>Area</h2>  
+       <select class="form-control">
+         <option>Select An Area</option>
+         <option>Dhanmondi</option>
+         <option>Uttara</option>
+         <option>Gulshan</option>
+         <option>Mohammadpur</option>
+         <option>Motijheel</option>
+         <option>Mohakhali</option>
+         <option>Bananni</option>
+         <option>Mirpur</option>
+         <option>Kallyanpur</option>
+       </select>
+     </div>
+
+   </div>
+   <div class="col-md-4 col-sm-4">
+
+    <div class="gaps">
+     <h2>Hospitals</h2> 
+     <select class="form-control">
+       <option>Select A Hospital</option>
+       <option>Apollo Hospitals</option>
+       <option>Square Hospital Ltd</option>
+       <option>United Hospital Limited.</option>
+       <option>Ibn-Sina Medical College & Hospital.</option>
+       <option>Labaid Cardiac and Specialized Hospital.</option>
+       <option>Ad-din Hospital Ltd.</option>
+       <option>Popular Specialized Hospital Ltd.</option>
+       <option>Green Life Medical College & Hospital.</option>
+     </select>
+   </div>
+
+ </div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+
+
+
+<!--<section id="service" class="section-padding">-->
+  <!--<div class="container">-->
+    <div class="row">
+      <div class="col-md-4 col-sm-4">
+        <!--<h2>Our Service</h2>-->
+        <a class="navbar-brand" float-right="20px"><img src="img/doctorhelp.png" class="img-responsive"></a>
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <div class="service-info">
+          <div class="icon">
+            <i class="fa fa-stethoscope"></i>
+          </div>
+          <div class="icon-info">
+            <h4>24 Hour Support</h4>
+            <p>24 Hour support service that is available<br>any time and usually every day.</p>
+          </div>
+        </div>
+        <div class="service-info">
+          <div class="icon">
+            <i class="fa fa-ambulance"></i>
+          </div>
+          <div class="icon-info">
+            <h4>Emergency Services</h4>
+            <p>We work with a wide range of emergency service.<br>Supplying a range of solutions and support services.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <div class="service-info">
+          <div class="icon">
+            <i class="fa fa-user-md"></i>
+          </div>
+          <div class="icon-info">
+            <h4>Medical Counseling</h4>
+            <p>We measure success in smiles and improvement in health and quality of life.<br></p>
+          </div>
+        </div>
+        <div class="service-info">
+          <div class="icon">
+            <i class="fa fa-medkit"></i>
+          </div>
+          <div class="icon-info">
+            <h4>Advance Appointment</h4>
+            <p>We will take Advance Appointment to help patient.<br>And aslo send a Serial Number with Time & date.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--</div>-->
+<!--</section>-->
+<footer id="footer">
+  <div class="top-footer">
     <div class="container">
       <div class="row">
-        <div class="col-md-4 col-sm-4">
-          <h2 class="ser-title">Our Service</h2>
-          <hr class="botm-line">
-          <a class="navbar-brand" href="#banner"><img src="img/doctorhelp.png" class="img-responsive"></a>
-        </div>
-        <div class="col-md-4 col-sm-4">
-          <div class="service-info">
-            <div class="icon">
-              <i class="fa fa-stethoscope"></i>
-            </div>
-            <div class="icon-info">
-              <h4>24 Hour Support</h4>
-              <p>24 Hour support service that is available<br>any time and usually every day.<br>24 Hours a day, 7 days a week.</p>
-            </div>
+        <div class="col-md-4 col-sm-4 marb20">
+          <div class="ftr-tle">
+            <h4 class="white no-padding">Follow Us</h4>
           </div>
-          <div class="service-info">
-            <div class="icon">
-              <i class="fa fa-ambulance"></i>
-            </div>
-            <div class="icon-info">
-              <h4>Emergency Services</h4>
-              <p>We work with a wide range of emergency service.<br>Supplying a range of solutions and support services.</p>
-            </div>
+          <div class="info-sec">
+            <ul class="social-icon">
+              <a href="https://www.facebook.com"><li class="bglight-blue"><i class="fa fa-facebook"></i></li></a>
+              <a href="https://www.plus.google.com"><li class="bgred"><i class="fa fa-google-plus"></i></li></a>
+              <a href="https://www.linkedin.com"><li class="bgdark-blue"><i class="fa fa-linkedin"></i></li></a>
+              <a href="https://www.twitter.com"><li class="bglight-blue"><i class="fa fa-twitter"></i></li></a>
+            </ul>
           </div>
         </div>
-        <div class="col-md-4 col-sm-4">
-          <div class="service-info">
-            <div class="icon">
-              <i class="fa fa-user-md"></i>
-            </div>
-            <div class="icon-info">
-              <h4>Medical Counseling</h4>
-              <p>We measure success in smiles and improvement in health and quality of life.<br></p>
-            </div>
+        <div class="col-md-4 col-sm-4 marb20">
+          <div class="ftr-tle">
+            <h4 class="white no-padding">Quick Links</h4>
           </div>
-          <div class="service-info">
-            <div class="icon">
-              <i class="fa fa-medkit"></i>
-            </div>
-            <div class="icon-info">
-              <h4>Advance Appointment</h4>
-              <p>We will take Advance Appointment to help patient.<br>And aslo send a Serial Number with Time & date.</p>
-            </div>
+          <div class="info-sec">
+            <ul class="quick-info">
+              <li><a href="index.html"><i class="fa fa-circle"></i>Home</a></li>
+              <li><a href="#service"><i class="fa fa-circle"></i>Service</a></li>
+              <li><a href="#contact"><i class="fa fa-circle"></i>Appointment</a></li>
+            </ul>
           </div>
         </div>
+        <div class="col-md-4 col-sm-4 marb20">
+          <div class="ftr-tle">
+            <h4 class="white no-padding">Contact us</h4>
+          </div>
+          <div class="col-md-4 col-sm-4">
+           <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>Dhanmondi,Dhaka,Bangladesh</p>
+           <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>bappydas.bd51@gmail.com</p>
+           <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>+8801751069366</p>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+ <div class="footer-line">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        © R2MBF. All Rights Reserved
       </div>
     </div>
-  </section>
-  <footer id="footer">
-    <div class="top-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 col-sm-4 marb20">
-            <div class="ftr-tle">
-              <h4 class="white no-padding">Follow Us</h4>
-            </div>
-            <div class="info-sec">
-              <ul class="social-icon">
-                <a href="www.facebook.com"><li class="bglight-blue"><i class="fa fa-facebook"></i></li></a>
-                <a href="www.plus.google.com"><li class="bgred"><i class="fa fa-google-plus"></i></li></a>
-                <a href="www.linkedin.com"><li class="bgdark-blue"><i class="fa fa-linkedin"></i></li></a>
-                <a href="www.twitter.com"><li class="bglight-blue"><i class="fa fa-twitter"></i></li></a>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4 marb20">
-            <div class="ftr-tle">
-              <h4 class="white no-padding">Quick Links</h4>
-            </div>
-            <div class="info-sec">
-              <ul class="quick-info">
-                <li><a href="index.html"><i class="fa fa-circle"></i>Home</a></li>
-                <li><a href="#service"><i class="fa fa-circle"></i>Service</a></li>
-                <li><a href="#contact"><i class="fa fa-circle"></i>Appointment</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4 marb20">
-            <div class="ftr-tle">
-              <h4 class="white no-padding">Contact us</h4>
-            </div>
-			<div class="col-md-4 col-sm-4">
-			  <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>Dhanmondi,Dhaka,Bangladesh</p>
-			  <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>bappydas.bd51@gmail.com</p>
-			  <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>+8801751069366</p>
-			</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-line">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            © R2MBF. All Rights Reserved
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/custom.js"></script>
-  <script src="contactform/contactform.js"></script>
+  </div>
+</div>
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="contactform/contactform.js"></script>
+<!-- For Appoinment Javascript-->
+
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 
 </body>
 
