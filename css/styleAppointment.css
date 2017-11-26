@@ -1,10 +1,4 @@
-/*
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
-*/
-/*--reset--*/
+
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
 article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
 ol,ul{list-style:none;margin:0px;padding:0px;}
@@ -30,7 +24,7 @@ img{max-width:100%;}
 body{
 	font-family: 'Roboto', sans-serif;
 	font-size: 100%;
-	background: url(../images/b1.jpg)no-repeat center top;
+	background: url(../images/)no-repeat center top;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -40,7 +34,7 @@ body{
 }
 .bg-agile {
     width: 65%;
-    margin: 0 auto;
+    margin: 80px auto;
 }
 
 h1 {
@@ -52,7 +46,7 @@ h1 {
     letter-spacing: 6px;
     margin: 1.1em 0;
     text-align: center;
-    font-family: 'Droid Sans', sans-serif;
+    font-family: 'Droid Sans', Candal;
 }
 /*--appointment--*/
 .book-appointment h2 {
@@ -61,13 +55,18 @@ h1 {
     color: #fff;
     text-transform: uppercase;
     margin-bottom: 1.5em;
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: 4px;
     font-family: 'Droid Sans', sans-serif;
+    padding: 8px;
+    background: #9E9E9E;
+    width: 780px;
+    
+
 }
 .book-appointment {
-    background:rgba(1, 38, 64, 0.68);
-    padding: 50px 30px;
+    background: url(../img/contact-bc4.jpg)no-repeat center top;
+    padding: 40px 30px;
 }
 .book-appointment input[type="text"], .book-appointment input[type="date"], .book-appointment input[type="time"], .book-appointment input[type="email"],textarea {
     width: 85%;
@@ -85,7 +84,7 @@ h1 {
 }
 textarea {
 	resize:none;
-	height:25px
+	height:40px
 }
 .book-appointment select.form-control {
     outline: none;
