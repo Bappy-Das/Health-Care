@@ -9,8 +9,7 @@
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   
   <link href="css/wickedpicker.css" rel="stylesheet" type='text/css' media="all" />
   <link href="css/styleAppointment.css" rel='stylesheet' type='text/css' />
@@ -54,212 +53,183 @@
               <div class="banner-text text-center">
                 <h1 class="white">Healthcare at your desk!!</h1>
                 <p>Time is generally the best doctor.so well choose your best doctor before time losses.<br>The art of medicine consists in amusing the patient while nature cures the disease.</p>
-                <a href="#myModal" class="btn btn-lg btn-primary" data-toggle="modal" style="margin-top:15px">Make An Appoinment</a>
-                
-                
-                <div id="myModal" class="modal">
 
-                 <!-- Modal content -->
-                 
-                 <div class="bg-agile">
-                  <div class="book-appointment">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:white">&times;</button>
-                    <h2>Make an appointment</h2>
-                    <form action="#" method="post">
-                      <div class="left-agileits-w3layouts same">
-                        <div class="gaps">
-                         <p>Patient Name</p>
-                         <input type="text" name="Patient Name" placeholder="" required=""/>
-                       </div>	
-                       <div class="gaps">	
-                         <p>Phone Number</p>
-                         <input type="text" name="Number" placeholder="" required=""/>
-                       </div>
-                       <div class="gaps">
-                         <p>Email</p>
-                         <input type="email" name="email" placeholder="" required="" />
-                       </div>	
-                       <div class="gaps">
-                         <p>Symptoms</p>
-                         <textarea name="About Symptoms" placeholder="" required="" ></textarea>
-                       </div>
-                     </div>
-                     <div class="right-agileinfo same">
-                      <div class="gaps">
-                       <p>Select Date</p>		
-                       <input  id="datepicker1" name="Text" type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
-                     </div>
-                     <div class="gaps">
-                       <p>Department</p>	
-                       <select class="form-control">
-                         <option></option>
-                         <option>Cardiology</option>
-                         <option>Ophthalmology</option>
-                         <option>Neurology</option>
-                         <option>Psychology</option>
-                         <option>Dermatology</option>
-                       </select>
-                     </div>
-                     <div class="gaps">
-                       <p>Gender</p>	
-                       <select class="form-control">
-                         <option></option>
-                         <option>Male</option>
-                         <option>Female</option>
-                       </select>
-                     </div>
-                     <div class="gaps">
-                       <p>Department</p>	
-                       <select class="form-control">
-                         <option></option>
-                         <option>Cardiology</option>
-                         <option>Ophthalmology</option>
-                         <option>Neurology</option>
-                         <option>Psychology</option>
-                         <option>Dermatology</option>
-                       </select>
-                     </div>
-                   </div>
-                   <div class="clear"></div>
-                   <input type="submit" value="Make an appointment">
-                 </form>
-               </div>
-             </div>
-           </div> 
-
-
-           
-           <div class="overlay-detail text-center">
-            <a href="#service"><i class="fa fa-angle-down"></i></a>
+                <div class="overlay-detail text-center">
+                  <a href="#service1"><i class="fa fa-angle-down"></i></a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
+
+      <section id="service1" class="section-padding" style="background:#154D8A">
+        <div class="container">
+
+          <div class="row">
+            <h1>Find Hospital near Your Door</h1>
+            <div class="col-md-4 col-sm-4">
+              <div class="gaps">
+                <h2>City</h2>  
+                <select class="form-control" name="City" id="City">
+                <!-- <option>Select A City</option>
+                 <option>Dhaka</option>
+                 <option>Chittagong</option>
+                 <option>Rajshahi</option>
+                 <option>Barisal</option>
+                 <option>Khulna</option>
+                 <option>Sylhet</option>
+                 <option>Rangpur</option>
+                 <option>Mymensingh</option>-->
+               </select>
+             </div>
+
+           </div>
+           <div class="col-md-4 col-sm-4">
+
+            <div class="gaps">
+             <h2>Area</h2>  
+             <select class="form-control" name="Area" id="Area">
+              <!-- <option>Select An Area</option>
+               <option>Dhanmondi</option>
+               <option>Uttara</option>
+               <option>Gulshan</option>
+               <option>Mohammadpur</option>
+               <option>Motijheel</option>
+               <option>Mohakhali</option>
+               <option>Bananni</option>
+               <option>Mirpur</option>
+               <option>Kallyanpur</option>-->
+             </select>
+           </div>
+
+         </div>
+         <div class="col-md-4 col-sm-4">
+
+          <div class="search_button">
+            <i class="fa fa-search" aria-hidden="true"></i>
+<button type="button">Search Hospitals</button>
+          </div>
+
+        </div>
+
+
+        <script>
+          $(document).ready(function(){
+
+           load_json_data('City');
+
+           function load_json_data(id, parent_id)
+           {
+            var html_code = '';
+            $.getJSON('data_name.json', function(data){
+
+             html_code += '<option value="">Select '+id+'</option>';
+             $.each(data, function(key, value){
+              if(id == 'City')
+              {
+               if(value.parent_id == '0')
+               {
+                html_code += '<option value="'+value.id+'">'+value.name+'</option>';
+              }
+            }
+            else
+            {
+             if(value.parent_id == parent_id)
+             {
+              html_code += '<option value="'+value.id+'">'+value.name+'</option>';
+            }
+          }
+        });
+             $('#'+id).html(html_code);
+           });
+
+          }
+
+          $(document).on('change', '#City', function(){
+            var country_id = $(this).val();
+            if(country_id != '')
+            {
+             load_json_data('Area', country_id);
+           }
+           else
+           {
+             $('#Area').html('<option value="">Select Area</option>');
+
+           }
+         });
+          $(document).on('change', '#Area', function(){
+            var state_id = $(this).val();
+            if(state_id != '')
+            {
+             load_json_data('city', state_id);
+           }
+           else
+           {
+             $('#city').html('<option value="">Select city</option>');
+           }
+         });
+        });
+</script>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<div class="row">
+
+  <div class="col-md-12 col-sm-12">
+    <div class="oth_servc">
+      <div class="sv_pic">
+        <img src="img/doctorhelp.png" class="img-responsive">
+      </div>
+      <div class="sv_h1">
+        <h1>Other Service</h1>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-
-
-
-
-<section id="service1" class="section-padding" style="background:#154D8A">
-  <div class="container">
-
-    <div class="row">
-      <h1>Find Hospital near Your Door</h1>
-      <div class="col-md-4 col-sm-4">
-        <div class="gaps">
-          <h2>City</h2>  
-          <select class="form-control">
-           <option>Select A City</option>
-           <option>Dhaka</option>
-           <option>Chittagong</option>
-           <option>Rajshahi</option>
-           <option>Barisal</option>
-           <option>Khulna</option>
-           <option>Sylhet</option>
-           <option>Rangpur</option>
-           <option>Mymensingh</option>
-         </select>
-       </div>
-
-     </div>
-     <div class="col-md-4 col-sm-4">
-
-      <div class="gaps">
-       <h2>Area</h2>  
-       <select class="form-control">
-         <option>Select An Area</option>
-         <option>Dhanmondi</option>
-         <option>Uttara</option>
-         <option>Gulshan</option>
-         <option>Mohammadpur</option>
-         <option>Motijheel</option>
-         <option>Mohakhali</option>
-         <option>Bananni</option>
-         <option>Mirpur</option>
-         <option>Kallyanpur</option>
-       </select>
-     </div>
-
-   </div>
+<div class="row">
+  <div class="other_service">
    <div class="col-md-4 col-sm-4">
-
-    <div class="gaps">
-     <h2>Hospitals</h2> 
-     <select class="form-control">
-       <option>Select A Hospital</option>
-       <option>Apollo Hospitals</option>
-       <option>Square Hospital Ltd</option>
-       <option>United Hospital Limited.</option>
-       <option>Ibn-Sina Medical College & Hospital.</option>
-       <option>Labaid Cardiac and Specialized Hospital.</option>
-       <option>Ad-din Hospital Ltd.</option>
-       <option>Popular Specialized Hospital Ltd.</option>
-       <option>Green Life Medical College & Hospital.</option>
-     </select>
-   </div>
-
- </div>
-</div>
-
-</div>
-</div>
-</section>
-
-
-
-
-
-<!--<section id="service" class="section-padding">-->
-  <!--<div class="container">-->
-    <div class="row">
-      <div class="col-md-4 col-sm-4">
-        <!--<h2>Our Service</h2>-->
-        <a class="navbar-brand" float-right="20px"><img src="img/doctorhelp.png" class="img-responsive"></a>
+     <div class="service-info">
+      <div class="icon">
+        <i class="fa fa-stethoscope"></i>
       </div>
-      <div class="col-md-4 col-sm-4">
-        <div class="service-info">
-          <div class="icon">
-            <i class="fa fa-stethoscope"></i>
-          </div>
-          <div class="icon-info">
-            <h4>24 Hour Support</h4>
-            <p>24 Hour support service that is available<br>any time and usually every day.</p>
-          </div>
-        </div>
-        <div class="service-info">
-          <div class="icon">
-            <i class="fa fa-ambulance"></i>
-          </div>
-          <div class="icon-info">
-            <h4>Emergency Services</h4>
-            <p>We work with a wide range of emergency service.<br>Supplying a range of solutions and support services.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-4">
-        <div class="service-info">
-          <div class="icon">
-            <i class="fa fa-user-md"></i>
-          </div>
-          <div class="icon-info">
-            <h4>Medical Counseling</h4>
-            <p>We measure success in smiles and improvement in health and quality of life.<br></p>
-          </div>
-        </div>
-        <div class="service-info">
-          <div class="icon">
-            <i class="fa fa-medkit"></i>
-          </div>
-          <div class="icon-info">
-            <h4>Advance Appointment</h4>
-            <p>We will take Advance Appointment to help patient.<br>And aslo send a Serial Number with Time & date.</p>
-          </div>
-        </div>
+      <div class="icon-info">
+        <h4>24 Hour Support</h4>
+        <p>24 Hour support service that is available any time and usually every day.</p>
       </div>
     </div>
-  <!--</div>-->
+  </div>
+  <div class="col-md-4 col-sm-4">
+    <div class="service-info">
+      <div class="icon">
+        <i class="fa fa-ambulance"></i>
+      </div>
+      <div class="icon-info">
+        <h4>Emergency Services</h4>
+        <p>We work with a wide range of emergency service.Supplying a range of solutions and support services.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4">
+    <div class="service-info">
+      <div class="icon">
+        <i class="fa fa-user-md"></i>
+      </div>
+      <div class="icon-info">
+        <h4>Medical Counseling</h4>
+        <p>We measure success in smiles and improvement in health and quality of life.<br></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--</div>-->
 <!--</section>-->
 <footer id="footer">
   <div class="top-footer">
@@ -321,29 +291,6 @@
 <script src="contactform/contactform.js"></script>
 <!-- For Appoinment Javascript-->
 
-
-<script>
-// Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
 
 
 </body>
