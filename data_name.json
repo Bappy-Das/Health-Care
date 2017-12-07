@@ -1,0 +1,182 @@
+[
+ {
+  "id":"1",
+  "name":"Dhaka",
+  "parent_id":"0"
+ }, 
+ {
+  "id":"2",
+  "name":"Chittagong",
+  "parent_id":"0"
+ }, 
+ {
+  "id":"3",
+  "name":"Rajshahi",
+  "parent_id":"0"
+ },
+ {
+  "id":"4",
+  "name":"Barisal",
+  "parent_id":"0"
+ },
+ {
+  "id":"5",
+  "name":"Khulna",
+  "parent_id":"0"
+ },
+ {
+  "id":"6",
+  "name":"Rangpur",
+  "parent_id":"0"
+ },
+ {
+  "id":"7",
+  "name":"Mymensingh",
+  "parent_id":"0"
+ },
+  {
+  "id":"8",
+  "name":"Sylhet",
+  "parent_id":"0"
+ },
+
+
+
+
+
+
+ {
+  "id":"9",
+  "name":"Dhanmondi",
+  "parent_id":"1"
+ }, 
+ {
+  "id":"10",
+  "name":"Uttara",
+  "parent_id":"1"
+ }, 
+ {
+  "id":"11",
+  "name":"Gulshan",
+  "parent_id":"1"
+ }, 
+ {
+  "id":"12",
+  "name":"Mohammadpur",
+  "parent_id":"1"
+ }, 
+ {
+  "id":"13",
+  "name":"Motijheel",
+  "parent_id":"1"
+ }, 
+ {
+  "id":"14",
+  "name":"Mohakhali",
+  "parent_id":"1"
+ }, 
+ {
+  "id":"15",
+  "name":"Bananni",
+  "parent_id":"1"
+ }, 
+ {
+  "id":"16",
+  "name":"Mirpur",
+  "parent_id":"1"
+ }, 
+
+
+
+ {
+  "id":"17",
+  "name":"AAAAAAA",
+  "parent_id":"2"
+ }, 
+ {
+  "id":"18",
+  "name":"BBBBBBB",
+  "parent_id":"2"
+ }, 
+
+ {
+  "id":"19",
+  "name":"CCCCCC",
+  "parent_id":"2"
+ }, 
+ {
+  "id":"20",
+  "name":"DDDDDDDDD",
+  "parent_id":"2"
+ }, 
+ {
+  "id":"21",
+  "name":"EEEEEEEEEEE",
+  "parent_id":"2"
+ }, 
+
+
+
+
+
+ {
+  "id":"22",
+  "name":"WWWWWWWWWWWW",
+  "parent_id":"3"
+ }, 
+ {
+  "id":"23",
+  "name":"AFDAFGS",
+  "parent_id":"3"
+ }, 
+ {
+  "id":"24",
+  "name":"TSEGB",
+  "parent_id":"3"
+ }, 
+ {
+  "id":"25",
+  "name":"TSRGDHFBBCV",
+  "parent_id":"3"
+ }, 
+ {
+  "id":"26",
+  "name":"OEGTDFBC",
+  "parent_id":"3"
+ }, 
+
+
+
+
+ {
+  "id":"27",
+  "name":"VETHDGXBC",
+  "parent_id":"4"
+ }, 
+ {
+  "id":"28",
+  "name":"VTHGFB",
+  "parent_id":"4"
+ }, 
+ {
+  "id":"29",
+  "name":"STYYJHF",
+  "parent_id":"4"
+ }, 
+ {
+  "id":"30",
+  "name":"NDTJHCNB",
+  "parent_id":"4"
+ }, 
+
+ {
+  "id":"31",
+  "name":"CiDTYHFGB",
+  "parent_id":"4"
+ }, 
+ {
+  "id":"32",
+  "name":"GYHDFCNVB",
+  "parent_id":"4"
+ }
+]
